@@ -17,6 +17,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  *
@@ -96,7 +97,12 @@ public class Dummy implements Serializable {
 
     @Override
     public String toString() {
-        return "unu.jogja.project.ktp.coba.Dummy[ id=" + id + " ]";
+        return "Dummy{" + "id=" + id + ", tanggal=" + tanggal + ", gambar=" + gambar + '}';
     }
-    
+
+    public Dummy(Integer id, Date tanggal, byte[] gambar) {
+        this.id = id;
+        this.tanggal = tanggal;
+        this.gambar = gambar;
+    }
 }
