@@ -90,7 +90,7 @@ public class DummyController {
         return "redirect:/dummy";
     }
     
-    @RequestMapping(value = "/gambar/{id}", produces = {MediaType.IMAGE_PNG_VALUE, MediaType.IMAGE_JPEG_VALUE})
+    @RequestMapping(value = "/gambar/{id}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getGambar(@PathVariable("id") Integer gambarId) throws IOException {
         byte[] imageContent = dummyctrl.findDummy(gambarId).getGambar();
         final HttpHeaders headers = new HttpHeaders();

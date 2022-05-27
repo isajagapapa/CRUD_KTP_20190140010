@@ -11,6 +11,7 @@
 	<groupId>unu.jogja</groupId>
 	<artifactId>project.ktp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+        <packaging>war</packaging>
 	<name>project.ktp</name>
 	<description>CRUD KTP</description>
 	<properties>
@@ -28,6 +29,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+                <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+                        <scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -112,5 +118,5 @@
 			</plugin>
 		</plugins>
 	</build>
-    <packaging>jar</packaging>
+    
 </project>
